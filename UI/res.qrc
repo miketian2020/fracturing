@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>image/open.bmp</file>
+    <file>image/remove.bmp</file>
+    <file>image/save.bmp</file>
+  </qresource>
+</RCC>
