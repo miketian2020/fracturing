@@ -19,7 +19,7 @@ real_data=[20]
 class MyMplCanvas(FigureCanvas):
     """这是一个窗口部件，即QWidget（当然也是FigureCanvasAgg）"""
     def __init__(self, parent=None, width=5, height=4, dpi=100):
-        fig = Figure(figsize=(width, height), dpi=dpi)
+        fig = Figure(figsize=(width, pipheight), dpi=dpi)
         fig,self.axes = plt.subplots()
         self.compute_initial_figure()
         FigureCanvas.__init__(self, fig)
