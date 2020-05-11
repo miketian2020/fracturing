@@ -15,6 +15,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 global real_data
 real_data=[20]
+
 class MyMplCanvas(FigureCanvas):
     """这是一个窗口部件，即QWidget（当然也是FigureCanvasAgg）"""
     def __init__(self, parent=None, width=5, height=4, dpi=100):
