@@ -11,14 +11,14 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>测井数据转换</string>
+   <string>岩石力学强度计算</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>490</y>
+      <x>40</x>
+      <y>450</y>
       <width>301</width>
       <height>241</height>
      </rect>
@@ -203,8 +203,8 @@
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>500</y>
+      <x>540</x>
+      <y>480</y>
       <width>391</width>
       <height>211</height>
      </rect>
@@ -212,7 +212,7 @@
     <property name="title">
      <string>地应力转换参数：</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -268,8 +268,8 @@
    <widget class="QGroupBox" name="groupBox_5">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>30</y>
+      <x>390</x>
+      <y>20</y>
       <width>361</width>
       <height>341</height>
      </rect>
@@ -286,8 +286,8 @@
    <widget class="QGroupBox" name="gp_conventional_log">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
+      <x>20</x>
+      <y>20</y>
       <width>361</width>
       <height>341</height>
      </rect>
@@ -304,8 +304,8 @@
    <widget class="QGroupBox" name="gp_handled_data">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>30</y>
+      <x>780</x>
+      <y>20</y>
       <width>341</width>
       <height>341</height>
      </rect>
