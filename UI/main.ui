@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1029</width>
-    <height>821</height>
+    <width>1096</width>
+    <height>631</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>陆相页岩可压性评价软件-version1.0</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/picture/timg.jfif);</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">
@@ -19,7 +22,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1029</width>
+     <width>1096</width>
      <height>23</height>
     </rect>
    </property>
@@ -138,7 +141,9 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="res_main.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>actFile_exit</sender>

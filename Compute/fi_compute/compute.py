@@ -1,18 +1,16 @@
 import os
 import sys
 
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt, pyqtSlot, QItemSelectionModel, QDir, QModelIndex
+from PyQt5.QtCore import pyqtSlot, QItemSelectionModel
 from PyQt5.QtGui import QStandardItem,QStandardItemModel
-from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QAbstractItemView, QLabel, \
-    QMessageBox, QSplitter, QWidget
+from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QLabel, \
+    QMessageBox
 
-import numpy as np
 import matplotlib as mpl
 import matplotlib.style as mplStyle  #一个模块
 from matplotlib.backends.backend_qt5agg import (FigureCanvasQTAgg as FigureCanvas,
                                                 NavigationToolbar2QT as NavigationToolbar)
-from fi_compute.ficompute_ui import Ui_ficompute
+from Compute.fi_compute.ficompute_ui import Ui_ficompute
 
 
 class Compute(QMainWindow):

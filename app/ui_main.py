@@ -7,18 +7,19 @@
 # WARNING! All changes made in this file will be lost!
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1029, 821)
+        MainWindow.resize(1096, 631)
+        MainWindow.setStyleSheet("background-image: url(:/picture/timg.jfif);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1029, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1096, 23))
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
@@ -93,7 +94,7 @@ class Ui_MainWindow(object):
         self.menu_I.setTitle(_translate("MainWindow", "成果导出（I）"))
         self.menu_H.setTitle(_translate("MainWindow", "帮助（&H）"))
         self.actFile_wellinfo.setText(_translate("MainWindow", "输入井段参数"))
-        self.actFile_loadlogdata.setText(_translate("MainWindow", "导入测井数据"))
+        self.actFile_loadlogdata.setText(_translate("MainWindow", "处理测井数据"))
         self.actCal_strength.setText(_translate("MainWindow", "岩石力学强度计算"))
         self.actCal_brit.setText(_translate("MainWindow", "脆性计算方法"))
         self.actCal_fi.setText(_translate("MainWindow", "可压性计算"))
@@ -104,7 +105,7 @@ class Ui_MainWindow(object):
         self.actExport_txt.setText(_translate("MainWindow", "导出为txt文件"))
         self.actHelp_instruction.setText(_translate("MainWindow", "说明"))
         self.actFile_exit.setText(_translate("MainWindow", "退出"))
-
+import res_main_rc
 
 if __name__ == "__main__":
     import sys

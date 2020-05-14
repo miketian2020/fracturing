@@ -41,9 +41,13 @@ class Convert(QMainWindow):
 
     @pyqtSlot()
     def on_pb_convert_pressed(self):
-        depth = self.con_data['DEPTH']
-        tp = self.con_data['AC']
-        den = self.con_data['DEN']
+        # 数据预处理
+        handled_data = self.con_data[self.con_data["AC"]>0][self.con_data["DEN"]>1].round(3)
+
+        # 杨氏模量及泊松比计算
+        depth = handled_data['DEPTH']
+        tp = handled_data['AC']
+        den = handled_data['DEN']
 
         k_ymod = self.ui.k_ymod.value()
         b_ymod = self.ui.b_ymod.value()
@@ -54,11 +58,28 @@ class Convert(QMainWindow):
         con_y_mod = (den / ts ** 2) * ((3 * ts ** 2 - 4 * tp ** 2) / (ts ** 2 - tp ** 2)) * 10 ** 6
         con_p_ratio = (ts ** 2 - 2 * tp ** 2) / (2 * (ts ** 2 - tp ** 2))
 
-        y_mod = k_ymod * con_y_mod + b_ymod
-        p_ratio = k_pois * con_p_ratio + b_pois
+        y_mod = k_ymod * con_y_mod + b_ymod # 杨氏模量的series
+        p_ratio = k_pois * con_p_ratio + b_pois # 泊松比的series
 
-        self.handled_data = pd.DataFrame(list(zip(depth,y_mod,p_ratio)), columns=["深度", "杨氏模量", "泊松比"])
+        # 垂向地应力计算
+        dep_den = handled_data[["DEPTH", "DEN"]]
+        delta_depth = dep_den.iloc[100,0] - dep_den.iloc[99,0]
 
+        list1 = dep_den["DEN"].tolist()
+        result = []
+        for i in range(len(list1)):
+            if(i == 0):
+                result.append(list1[i])
+            elif(i > 0):
+                result.append(result[i-1] + list1[i])
+
+        ver_p = [(x*delta_depth + 120*1)*9.8/1000 for x in result]
+
+
+
+
+        handled_data = pd.DataFrame(list(zip(depth, y_mod, p_ratio, ver_p)), columns=["深度", "杨氏模量", "泊松比", "垂向地应力"])
+        self.handled_data = handled_data.round(3)
         self.handled_data_model = pandasModel(self.handled_data)
         self.ui.handled_data.setModel(self.handled_data_model)
 

@@ -5,9 +5,6 @@ from PyQt5.QtWidgets import QApplication, QTableView
 from PyQt5.QtCore import QAbstractTableModel, Qt
 
 
-df = pd.read_table("YY2_MECH.txt", sep="\s+")
-
-
 class pandasModel(QAbstractTableModel):
 
     def __init__(self, data):
@@ -31,13 +28,13 @@ class pandasModel(QAbstractTableModel):
             return self._data.columns[col]
         return None
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    model = pandasModel(df)
-    view = QTableView()
-    view.setModel(model)
-    view.resize(800, 600)
-    view.show()
-
-
-    sys.exit(app.exec_())
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     model = pandasModel(df)
+#     view = QTableView()
+#     view.setModel(model)
+#     view.resize(800, 600)
+#     view.show()
+#
+#
+#     sys.exit(app.exec_())

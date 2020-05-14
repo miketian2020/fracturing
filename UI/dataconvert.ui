@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>450</y>
-      <width>301</width>
-      <height>241</height>
+      <y>410</y>
+      <width>331</width>
+      <height>211</height>
      </rect>
     </property>
     <property name="title">
@@ -52,8 +52,11 @@
       </item>
       <item>
        <widget class="QDoubleSpinBox" name="k_ymod">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
         <property name="decimals">
-         <number>5</number>
+         <number>3</number>
         </property>
         <property name="minimum">
          <double>-99.000000000000000</double>
@@ -83,8 +86,11 @@
       </item>
       <item>
        <widget class="QDoubleSpinBox" name="b_ymod">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
         <property name="decimals">
-         <number>5</number>
+         <number>3</number>
         </property>
         <property name="minimum">
          <double>-99.000000000000000</double>
@@ -119,8 +125,11 @@
       </item>
       <item>
        <widget class="QDoubleSpinBox" name="k_pois">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
         <property name="decimals">
-         <number>5</number>
+         <number>3</number>
         </property>
         <property name="minimum">
          <double>-99.000000000000000</double>
@@ -150,8 +159,11 @@
       </item>
       <item>
        <widget class="QDoubleSpinBox" name="b_pois">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
         <property name="decimals">
-         <number>5</number>
+         <number>3</number>
         </property>
         <property name="minimum">
          <double>-99.000000000000000</double>
@@ -190,8 +202,8 @@
    <widget class="QPushButton" name="pb_convert">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>430</y>
+      <x>430</x>
+      <y>660</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -203,8 +215,8 @@
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>480</y>
+      <x>390</x>
+      <y>420</y>
       <width>391</width>
       <height>211</height>
      </rect>
@@ -218,7 +230,7 @@
        <x>50</x>
        <y>30</y>
        <width>221</width>
-       <height>111</height>
+       <height>118</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
@@ -229,18 +241,15 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_14">
-        <property name="text">
-         <string>水平最大地应力(Sh)系数</string>
+      <item row="2" column="1">
+       <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="decimals">
+         <number>3</number>
         </property>
        </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_15">
@@ -249,8 +258,32 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_14">
+        <property name="text">
+         <string>水平最大地应力(Sh)系数</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QDoubleSpinBox" name="doubleSpinBox">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+       </widget>
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_19">
@@ -259,8 +292,15 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -318,6 +358,42 @@
       <widget class="QTableView" name="handled_data"/>
      </item>
     </layout>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>420</y>
+      <width>271</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>水平地应力计算公式选择：</string>
+    </property>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>231</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
