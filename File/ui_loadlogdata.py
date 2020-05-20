@@ -13,7 +13,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_LoadLogData(object):
     def setupUi(self, LoadLogData):
         LoadLogData.setObjectName("LoadLogData")
-        LoadLogData.resize(928, 450)
+        LoadLogData.resize(928, 456)
+        LoadLogData.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.groupBox = QtWidgets.QGroupBox(LoadLogData)
         self.groupBox.setGeometry(QtCore.QRect(20, 10, 421, 431))
         self.groupBox.setStyleSheet("\n"
@@ -191,15 +192,19 @@ class Ui_LoadLogData(object):
         self.doubleSpinBox_24.setObjectName("doubleSpinBox_24")
         self.gridLayout_8.addWidget(self.doubleSpinBox_24, 1, 1, 1, 1)
         self.pushButton_2 = QtWidgets.QPushButton(self.groupBox)
-        self.pushButton_2.setGeometry(QtCore.QRect(260, 320, 111, 31))
+        self.pushButton_2.setGeometry(QtCore.QRect(220, 300, 81, 31))
         self.pushButton_2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton = QtWidgets.QPushButton(self.groupBox)
-        self.pushButton.setGeometry(QtCore.QRect(260, 360, 111, 31))
+        self.pushButton.setGeometry(QtCore.QRect(310, 300, 91, 31))
         self.pushButton.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.pushButton.setObjectName("pushButton")
+        self.pushButton_3 = QtWidgets.QPushButton(self.groupBox)
+        self.pushButton_3.setGeometry(QtCore.QRect(220, 350, 81, 31))
+        self.pushButton_3.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.pushButton_3.setObjectName("pushButton_3")
         self.tableView = QtWidgets.QTableView(LoadLogData)
-        self.tableView.setGeometry(QtCore.QRect(460, 20, 451, 421))
+        self.tableView.setGeometry(QtCore.QRect(460, 10, 451, 431))
         self.tableView.setObjectName("tableView")
 
         self.retranslateUi(LoadLogData)
@@ -231,6 +236,7 @@ class Ui_LoadLogData(object):
         self.label_24.setText(_translate("LoadLogData", "Max(Ω·m)"))
         self.pushButton_2.setText(_translate("LoadLogData", "确定预处理值"))
         self.pushButton.setText(_translate("LoadLogData", "导入测井文件"))
+        self.pushButton_3.setText(_translate("LoadLogData", "确认测井数据"))
 
 
 if __name__ == "__main__":

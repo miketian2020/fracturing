@@ -7,14 +7,14 @@
 # WARNING! All changes made in this file will be lost!
 
 
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1096, 631)
-        MainWindow.setStyleSheet("background-image: url(:/picture/timg.jfif);")
+        MainWindow.resize(1096, 633)
+        MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -106,6 +106,7 @@ class Ui_MainWindow(object):
         self.actHelp_instruction.setText(_translate("MainWindow", "说明"))
         self.actFile_exit.setText(_translate("MainWindow", "退出"))
 import res_main_rc
+
 
 if __name__ == "__main__":
     import sys
