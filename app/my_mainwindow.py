@@ -12,7 +12,7 @@ from data_convert.convert import Convert
 
 class Main(QMainWindow):
     def __init__(self, parent=None):
-        super(Main, self).__init__(parent)
+        super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -21,17 +21,25 @@ class Main(QMainWindow):
     def on_actFile_wellinfo_triggered(self):
         form_wellInfo = WellInfo(self)
         # form_wellInfo.setAttribute(Qt.WA_DeleteOnClose)
+        form_wellInfo.Signal_wellInfo.connect(self.wellInformation)
         form_wellInfo.setWindowModality(Qt.ApplicationModal)
         form_wellInfo.setWindowFlag(Qt.Window, True)
 
         form_wellInfo.show()
 
+    def wellInformation(self, wellInfo_list):
+        self.wellBlock = wellInfo_list[0]
+        self.wellLayer = wellInfo_list[1]
+        self.wellNum = wellInfo_list[2]
+        self.wellBottom = wellInfo_list[3]
+        self.wellTop = wellInfo_list[4]
+
     @pyqtSlot()
     def on_actFile_loadlogdata_triggered(self):
         form_loadLogdata = LoadLogData(self)
+
         form_loadLogdata.setWindowModality(Qt.ApplicationModal)
         form_loadLogdata.setWindowFlag(Qt.Window, True)
-
         form_loadLogdata.show()
 
     @pyqtSlot()
@@ -49,6 +57,11 @@ class Main(QMainWindow):
         form_calFi.setWindowFlag(Qt.Window, True)
 
         form_calFi.show()
+
+
+
+
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

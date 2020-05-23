@@ -53,7 +53,7 @@
    </widget>
    <widget class="QMenu" name="menu_I">
     <property name="title">
-     <string>成果导出（I）</string>
+     <string>成果导出（&amp;E）</string>
     </property>
     <addaction name="actExport_excel"/>
     <addaction name="actExport_txt"/>
@@ -78,7 +78,10 @@
   </action>
   <action name="actFile_loadlogdata">
    <property name="text">
-    <string>处理测井数据</string>
+    <string>导入测井数据</string>
+   </property>
+   <property name="toolTip">
+    <string>导入测井数据</string>
    </property>
   </action>
   <action name="actCal_strength">

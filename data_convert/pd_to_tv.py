@@ -4,7 +4,7 @@ from PyQt5.QtGui import QStandardItemModel
 from PyQt5.QtWidgets import QApplication, QTableView
 from PyQt5.QtCore import QAbstractTableModel, Qt
 
-
+# df = pd.read_table("延页2井标准.txt", sep="\s+")
 class pandasModel(QAbstractTableModel):
 
     def __init__(self, data):
@@ -27,6 +27,7 @@ class pandasModel(QAbstractTableModel):
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             return self._data.columns[col]
         return None
+
 
 # if __name__ == '__main__':
 #     app = QApplication(sys.argv)

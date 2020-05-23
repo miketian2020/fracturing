@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>220</width>
-    <height>346</height>
+    <width>267</width>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -66,7 +66,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="lb_top">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -79,7 +79,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_4"/>
+         <widget class="QDoubleSpinBox" name="sb_top">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_5">
@@ -93,7 +97,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QLabel" name="label_7">
+         <widget class="QLabel" name="lb_bottom">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -106,7 +110,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_5"/>
+         <widget class="QDoubleSpinBox" name="sb_bottom">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_6">
@@ -120,7 +128,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QLabel" name="label_8">
+         <widget class="QLabel" name="lb_layertype">
           <property name="minimumSize">
            <size>
             <width>80</width>
@@ -133,7 +141,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBox">
+         <widget class="QComboBox" name="cb_layertype">
           <item>
            <property name="text">
             <string>页岩储层</string>
@@ -163,7 +171,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pb_confirm">
      <property name="text">
       <string>确定选择</string>
      </property>
