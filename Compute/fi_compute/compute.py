@@ -7,9 +7,12 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QLabel, \
     QMessageBox
 
 import matplotlib as mpl
+import matplotlib.pyplot as plt
 import matplotlib.style as mplStyle  #一个模块
 from matplotlib.backends.backend_qt5agg import (FigureCanvasQTAgg as FigureCanvas,
                                                 NavigationToolbar2QT as NavigationToolbar)
+
+
 from Compute.fi_compute.ficompute_ui import Ui_ficompute
 
 
@@ -82,7 +85,7 @@ class Compute(QMainWindow):
                 self.itemModel.setItem(i,j,item)
 
     def __createFigure(self): # figure对象为绘图的画布对象，figurecanvas可以放在页面上
-        self.__fig = mpl.pyplot.Figure()
+        self.__fig = mpl.figure.Figure()
         figCanvas = FigureCanvas(self.__fig) # 创建FigureCanvas对象，必须传递一个Figure对象
         self.__fig.suptitle("可压性曲线")
 

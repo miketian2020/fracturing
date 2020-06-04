@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -36,7 +36,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QTableView" name="tableView_2"/>
+        <widget class="QTableView" name="tv_ori_data"/>
        </item>
       </layout>
      </widget>
@@ -87,8 +87,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>500.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -107,8 +116,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>50.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -127,8 +145,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>200.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -168,8 +195,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>5.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -188,8 +224,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -208,8 +253,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>2.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -249,8 +303,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>9999.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -268,6 +331,12 @@ background-color: rgb(166, 166, 166);</string>
           </property>
           <property name="suffix">
            <string/>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
           </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
@@ -288,6 +357,12 @@ background-color: rgb(166, 166, 166);</string>
           </property>
           <property name="suffix">
            <string/>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
           </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
@@ -330,8 +405,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>9999.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -349,6 +433,12 @@ background-color: rgb(166, 166, 166);</string>
           </property>
           <property name="suffix">
            <string/>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
           </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
@@ -369,6 +459,12 @@ background-color: rgb(166, 166, 166);</string>
           </property>
           <property name="suffix">
            <string/>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
           </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
@@ -411,8 +507,17 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
+          </property>
+          <property name="value">
+           <double>9999.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -430,6 +535,12 @@ background-color: rgb(166, 166, 166);</string>
           </property>
           <property name="suffix">
            <string/>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
           </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
@@ -451,6 +562,12 @@ background-color: rgb(166, 166, 166);</string>
           <property name="suffix">
            <string/>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
           <property name="stepType">
            <enum>QAbstractSpinBox::DefaultStepType</enum>
           </property>
@@ -458,11 +575,11 @@ background-color: rgb(166, 166, 166);</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>220</x>
-         <y>340</y>
+         <y>360</y>
          <width>181</width>
          <height>71</height>
         </rect>
@@ -502,7 +619,7 @@ background-color: rgb(166, 166, 166);</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QTableView" name="tableView_3"/>
+        <widget class="QTableView" name="tv_han_data"/>
        </item>
       </layout>
      </widget>

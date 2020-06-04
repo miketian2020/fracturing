@@ -8,7 +8,7 @@ class WellInfo(QWidget):
 
     Signal_wellInfo = pyqtSignal(list)
 
-    def __init__(self, parent=None):
+    def __init__(self,parent):
         super().__init__(parent)
         self.ui = Ui_wellinfo()
         self.ui.setupUi(self)
@@ -21,6 +21,6 @@ class WellInfo(QWidget):
         wellNum = self.ui.le_wellnum.text()
         wellBottom = self.ui.sb_bottom.value()
         wellTop = self.ui.sb_top.value()
-        wellInfo_list = [wellBlock, wellLayer, wellNum, wellBottom, wellTop]
-        self.Signal_wellInfo.emit(wellInfo_list)
+        self.wellInfo_list = [wellBlock, wellLayer, wellNum, wellBottom, wellTop]
+        self.Signal_wellInfo.emit(self.wellInfo_list)
         self.close()

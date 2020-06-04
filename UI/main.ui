@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1096</width>
-    <height>633</height>
+    <width>1121</width>
+    <height>646</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1096</width>
+     <width>1121</width>
      <height>23</height>
     </rect>
    </property>
@@ -40,7 +40,7 @@
      <string>计算（&amp;C）</string>
     </property>
     <addaction name="actCal_brit"/>
-    <addaction name="actCal_strength"/>
+    <addaction name="actCal_property"/>
     <addaction name="actCal_fi"/>
     <addaction name="actCal_cor"/>
    </widget>
@@ -48,7 +48,7 @@
     <property name="title">
      <string>曲线（&amp;P）</string>
     </property>
-    <addaction name="actPaint_strenth"/>
+    <addaction name="actPaint_property"/>
     <addaction name="actPaint_fi"/>
    </widget>
    <widget class="QMenu" name="menu_I">
@@ -84,9 +84,12 @@
     <string>导入测井数据</string>
    </property>
   </action>
-  <action name="actCal_strength">
+  <action name="actCal_property">
    <property name="text">
-    <string>岩石力学强度计算</string>
+    <string>岩石力学参数计算</string>
+   </property>
+   <property name="toolTip">
+    <string>岩石力学参数计算</string>
    </property>
   </action>
   <action name="actCal_brit">
@@ -113,9 +116,12 @@
     <string>压裂施工校正</string>
    </property>
   </action>
-  <action name="actPaint_strenth">
+  <action name="actPaint_property">
    <property name="text">
-    <string>岩石力学强度曲线</string>
+    <string>岩石力学参数曲线</string>
+   </property>
+   <property name="toolTip">
+    <string>岩石力学参数曲线</string>
    </property>
   </action>
   <action name="actPaint_fi">
