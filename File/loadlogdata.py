@@ -79,6 +79,7 @@ class LoadLogData(QWidget):
         model_han = pandasModel(self.handled_data)
         self.ui.tv_han_data.setModel(model_han)
 
+        # 将修改后的数据发送给主页面存储
         self.Signal_handleddata.emit(self.handled_data)
 
 

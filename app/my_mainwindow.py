@@ -8,11 +8,12 @@ from Compute.fi_compute.compute import Compute
 from File.loadlogdata import LoadLogData
 from app.ui_main import Ui_MainWindow
 from File.wellinfo import WellInfo
+from bricompute import BritCompute
 from calproperty import CalProperty
 from data_convert.convert import Convert
 from paintproperty import PaintProperty
 from pd_to_tv import pandasModel
-
+from PyQt5.QtGui import QIcon, QPixmap
 
 class Main(QMainWindow):
 
@@ -20,7 +21,18 @@ class Main(QMainWindow):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        #重新设置窗口标题
+        self.setWindowTitle("陆相页岩可压性评价软件-version1.0")
+        #重新设置窗口图标
+        icon = QIcon()
+        icon.addPixmap(QPixmap('icon.jpg'))
+        self.setWindowIcon(icon)
 
+
+    def paintEvent(self, event):# 设置背景图片
+        painter = QPainter(self)
+        pixmap = QPixmap("bgimage.jpg")
+        painter.drawPixmap(0,0,self.width(), self.height()-self.statusBar().height(), pixmap)
     @pyqtSlot()
     def on_actFile_wellinfo_triggered(self):
         form_wellInfo = WellInfo(self)
@@ -42,6 +54,13 @@ class Main(QMainWindow):
         form_loadLogdata.show()
 
     @pyqtSlot()
+    def on_actCal_brit_triggered(self):
+        form_calBrit = BritCompute(self)
+        form_calBrit.setWindowModality(Qt.ApplicationModal)
+        form_calBrit.setWindowFlag(Qt.Window, True)
+        form_calBrit.show()
+
+    @pyqtSlot()
     def on_actCal_property_triggered(self):
         form_calProperty = CalProperty(self, self.handled_data)
         form_calProperty.Signal_result.connect(self.property_result)
@@ -54,7 +73,6 @@ class Main(QMainWindow):
         form_calFi = Compute(self)
         form_calFi.setWindowModality(Qt.ApplicationModal)
         form_calFi.setWindowFlag(Qt.Window, True)
-
         form_calFi.show()
 
     @pyqtSlot()

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>267</width>
+    <width>222</width>
     <height>365</height>
    </rect>
   </property>
@@ -83,6 +83,12 @@
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>5000.000000000000000</double>
+          </property>
          </widget>
         </item>
         <item>
@@ -113,6 +119,12 @@
          <widget class="QDoubleSpinBox" name="sb_bottom">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>5000.000000000000000</double>
           </property>
          </widget>
         </item>

@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_wellinfo(object):
     def setupUi(self, wellinfo):
         wellinfo.setObjectName("wellinfo")
-        wellinfo.resize(267, 365)
+        wellinfo.resize(200, 392)
         self.verticalLayout = QtWidgets.QVBoxLayout(wellinfo)
         self.verticalLayout.setObjectName("verticalLayout")
         self.well_description = QtWidgets.QGroupBox(wellinfo)
@@ -54,6 +54,8 @@ class Ui_wellinfo(object):
         self.horizontalLayout.addWidget(self.lb_top)
         self.sb_top = QtWidgets.QDoubleSpinBox(self.layer_description)
         self.sb_top.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.sb_top.setDecimals(3)
+        self.sb_top.setMaximum(5000.0)
         self.sb_top.setObjectName("sb_top")
         self.horizontalLayout.addWidget(self.sb_top)
         self.label_5 = QtWidgets.QLabel(self.layer_description)
@@ -68,6 +70,8 @@ class Ui_wellinfo(object):
         self.horizontalLayout_2.addWidget(self.lb_bottom)
         self.sb_bottom = QtWidgets.QDoubleSpinBox(self.layer_description)
         self.sb_bottom.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.sb_bottom.setDecimals(3)
+        self.sb_bottom.setMaximum(5000.0)
         self.sb_bottom.setObjectName("sb_bottom")
         self.horizontalLayout_2.addWidget(self.sb_bottom)
         self.label_6 = QtWidgets.QLabel(self.layer_description)
